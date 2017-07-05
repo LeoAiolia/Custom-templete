@@ -29,11 +29,11 @@
 //               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
 //                          佛祖保佑         永无bug
-//------------------------------------------------------------------------
+//
 
 #import "___FILEBASENAME___.h"
 
-@interface ___FILEBASENAMEASIDENTIFIER___ ()
+@interface ___FILEBASENAMEASIDENTIFIER___ () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong,readonly)   UITableView *tableView;
 //@property (nonatomic,strong)   <#type#>             <#name#>
@@ -83,7 +83,11 @@
 
 - (void)initUI
 {
-    
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, screenSize.height) style:UITableViewStyleGrouped];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    [self.view addSubview:_tableView];
 }
 
 #pragma mark - tableViewDatasource -
@@ -124,7 +128,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 #pragma mark - actionSheet -
 
