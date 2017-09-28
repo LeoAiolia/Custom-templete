@@ -1,9 +1,4 @@
-//
-//  ___FILENAME___
-//  ___PROJECTNAME___
-//
-//  Created by ___FULLUSERNAME___ on ___DATE___.
-//___COPYRIGHT___
+//___FILEHEADER___
 //
 //
 //                                  _oo8oo_
@@ -33,21 +28,16 @@
 
 #import "___FILEBASENAME___.h"
 
-@interface ___FILEBASENAMEASIDENTIFIER___ () <UITableViewDelegate,UITableViewDataSource>
-
-@property (nonatomic,strong,readonly)   UITableView *tableView;
-//@property (nonatomic,strong)   <#type#>             <#name#>
-//@property (nonatomic,copy)     <#type#>             <#name#>
-//@property (nonatomic,assign)   <#type#>             <#name#>
-//@property (nonatomic,weak)     <#type#>             <#name#>
+@interface ___FILEBASENAMEASIDENTIFIER___ ()
 
 @end
 
 @implementation ___FILEBASENAMEASIDENTIFIER___
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - life cycle -
@@ -57,7 +47,8 @@
     
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     [self initData];
@@ -83,56 +74,15 @@
 
 - (void)initUI
 {
-    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, screenSize.height) style:UITableViewStyleGrouped];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    [self.view addSubview:_tableView];
-}
 
-#pragma mark - tableViewDatasource -
+}
+#pragma mark - delegate -
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return <#1#>;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return <#rowHeight#>;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 0.001;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return <#sectionHeight#>;
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    static NSString *const cellIdentifier = @"___FILEBASENAME___TableViewCellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
-    }
-    
-    return cell;
-}
-
-#pragma mark - tableViewDelegate -
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
 #pragma mark - actionSheet -
 
 #pragma mark - private -
+
+
 
 
 @end

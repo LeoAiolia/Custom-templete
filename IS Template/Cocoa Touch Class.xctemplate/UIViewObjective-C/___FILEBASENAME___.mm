@@ -1,9 +1,4 @@
-//
-//  ___FILENAME___
-//  ___PROJECTNAME___
-//
-//  Created by ___FULLUSERNAME___ on ___DATE___.
-//___COPYRIGHT___
+//___FILEHEADER___
 //
 //
 //
@@ -31,12 +26,7 @@
 //
 //                          佛祖保佑         永无bug
 //
-
 #import "___FILEBASENAME___.h"
-
-@interface ___FILEBASENAME___ ()
-
-@end
 
 @implementation ___FILEBASENAMEASIDENTIFIER___
 
@@ -63,5 +53,6 @@
 #pragma mark - public Method -
 
 #pragma mark - private Method -
+
 
 @end
